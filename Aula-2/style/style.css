@@ -1,0 +1,50 @@
+/* Define margens e preenchimentos como zero para todo o documento, 
+   garantindo que a página ocupe 100% da altura e largura */
+   body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    font-family: 'Roboto', sans-serif; /* Fonte padrão do corpo do texto */
+}
+
+/* Define um container que cobre toda a tela, 
+   centraliza o conteúdo e esconde o transbordamento */
+.container {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    display: flex; /* Manipular no Modo desenvolvedor */
+    align-items: center;
+    justify-content: center;
+}
+
+/* Estiliza a imagem de fundo para cobrir toda a tela, 
+   posicionando-a atrás de outros elementos e adiciona transições para efeitos */
+.background-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Mantém a proporção da imagem enquanto cobre a área */
+    position: absolute;
+    z-index: -1; /* Coloca a imagem atrás de outros elementos */
+    transition: transform 0.5s ease, filter 0.5s ease; /* Adiciona transições para transformações e filtro */
+    filter: brightness(50%); /* Escurece a imagem inicialmente */
+}
+
+/* Quando o mouse passa sobre a imagem, remove o escurecimento e expande a imagem */
+.container:hover .background-image,
+.container:focus .background-image {
+    filter: brightness(100%); /* Remove o escurecimento */
+    transform: scale(1.1); /* Expande a imagem */
+}
+
+/* Estiliza o título, posicionando-o no centro do container, 
+   com uma cor branca e uma fonte específica */
+.title {
+    position: relative;
+    color: white; /* Cor do texto */
+    font-family: 'Raleway', sans-serif; /* Fonte do Google */
+    font-size: 4em; /* Tamanho grande da fonte */
+    z-index: 1; /* Coloca o texto acima da imagem e da sobreposição */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7); /* Adiciona sombra ao texto para melhor legibilidade */
+}
