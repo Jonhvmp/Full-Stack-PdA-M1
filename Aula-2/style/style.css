@@ -48,3 +48,19 @@
     z-index: 1; /* Coloca o texto acima da imagem e da sobreposição */
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7); /* Adiciona sombra ao texto para melhor legibilidade */
 }
+
+/* Media Queries para responsividade */
+
+/* Para telas menores (tablets em modo retrato e maiores smartphones) */
+@media (max-width: 768px) {
+    .title {
+        font-size: 3em; /* Reduz o tamanho da fonte */
+    }
+}
+
+/* Para dispositivos móveis (smartphones) */
+@media (max-width: 480px) {
+    .title {
+        font-size: 2em; /* Reduz ainda mais o tamanho da fonte */
+    }
+}
