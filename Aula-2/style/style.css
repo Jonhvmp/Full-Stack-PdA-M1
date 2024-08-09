@@ -7,6 +7,12 @@
     font-family: 'Roboto', sans-serif; /* Fonte padrão do corpo do texto */
 }
 
+:root{
+    --primary-color: #007bff; /* Define uma variável de cor primária */
+    --secondary-color: #6c757d; /* Define uma variável de cor secund */
+    --background-color: #f8f9fa; /* Define uma variável de cor de fundo */
+}
+
 /* Define um container que cobre toda a tela, 
    centraliza o conteúdo e esconde o transbordamento */
 .container {

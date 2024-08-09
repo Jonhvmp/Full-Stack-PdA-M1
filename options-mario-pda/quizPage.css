@@ -1,0 +1,133 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: monospace; /* Define uma fonte única para toda a página */
+    box-sizing: border-box; /* Garante que padding e border sejam incluídos nas dimensões */
+}
+
+body {
+    background: linear-gradient(135deg, #746F6F 30%, #3E3A3A 100%); /* Gradiente sutil no fundo */
+    color: white; /* Muda a cor do texto para branco */
+    text-align: center; /* Centraliza o texto na página */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 100vh; /* Garante que o conteúdo ocupe a altura total da viewport */
+    padding: 20px;
+}
+
+.question {
+    width: 100%;
+    max-width: 800px; /* Limita a largura máxima da questão */
+    margin-top: 20px; /* Espaçamento superior para a questão */
+    margin-bottom: 30px; /* Espaçamento inferior para a questão */
+    padding: 20px; /* Espaçamento interno para a questão */
+    text-align: justify; /* Justifica o texto da questão */
+    background-color: #f7f7f7; /* Adiciona uma cor de fundo leve */
+    color: black; /* Cor do texto */
+    border-radius: 8px; /* Bordas arredondadas para suavizar o visual */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Adiciona uma sombra sutil */
+}
+
+.container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    max-width: 600px; /* Limita a largura máxima do container */
+    margin-bottom: 30px; /* Espaçamento inferior para o container */
+}
+
+.options {
+    display: flex;
+    flex-direction: column; /* Organiza as opções em uma coluna */
+    align-items: center;
+    width: 100%; /* Define a largura das opções */
+}
+
+.labelOption {
+    display: flex;
+    align-items: center; /* Alinha o checkbox e o texto verticalmente ao centro */
+    font-size: 18px; /* Define o tamanho da fonte para as opções */
+    margin-bottom: 15px; /* Espaçamento entre cada opção */
+    padding: 15px 20px; /* Adiciona espaçamento ao redor do texto da opção */
+    background-color: #e7e7e7; /* Fundo leve para destacar as opções */
+    color: #000;
+    border-radius: 5px; /* Bordas arredondadas */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Sombra leve para destacar as opções */
+    cursor: pointer; /* Adiciona um cursor de pointer ao passar sobre as opções */
+    width: 100%; /* As opções ocupam toda a largura disponível */
+    max-width: 500px; /* Limita a largura máxima das opções */
+    text-align: left; /* Alinha o texto à esquerda dentro da opção */
+    transition: 0.5s;
+}
+
+.labelOption:hover {
+    background-color: #b7b7b7; /* Cor de fundo muda ao passar o mouse sobre a opção */
+}
+
+.labelOption input {
+    margin-right: 15px; /* Espaçamento à direita do checkbox */
+    width: 20px; /* Define a largura do checkbox */
+    height: 20px; /* Define a altura do checkbox */
+    cursor: pointer; /* Adiciona um cursor de pointer ao passar sobre o checkbox */
+    accent-color: #746F6F; /* Define uma cor personalizada para o checkbox no Chrome */
+}
+
+.helps {
+    display: flex;
+    flex-direction: column; /* Organiza os botões de ajuda em uma coluna */
+    align-items: center; /* Centraliza os botões */
+}
+
+button {
+    margin-top: 20px; /* Adiciona margem superior aos botões */
+    margin-bottom: 20px; /* Adiciona margem inferior aos botões */
+    width: 150px; /* Define a largura dos botões */
+    height: 50px; /* Define a altura dos botões */
+    border-radius: 5px; /* Adiciona bordas arredondadas aos botões */
+    font-size: 18px; /* Define o tamanho da fonte nos botões */
+    background-color: antiquewhite; /* Cor de fundo dos botões */
+    border: 2px solid #746F6F; /* Define a cor e a espessura da borda dos botões */
+    cursor: pointer; /* Adiciona um cursor de pointer ao passar sobre os botões */
+    transition: all 0.3s ease; /* Aplica transição suave para todas as mudanças */
+}
+
+button:hover {
+    background-color: #ccc; /* Cor de fundo muda ao passar o mouse */
+    color: #746F6F; /* Cor do texto muda ao passar o mouse */
+    border: 2px solid antiquewhite; /* A borda também muda de cor */
+}
+
+.btnTry {
+    margin-left: 10px; /* Define um espaço a esquerda para não grudar o elemento */
+    width: 150px; /* Define a largura específica para o botão "Tentar Novamente" */
+    height: 50px; /* Define a altura específica para o botão "Tentar Novamente" */
+    font-size: 20px; /* Tamanho da fonte para o botão "Tentar Novamente" */
+    background-color: antiquewhite; /* Cor de fundo específica para o botão "Tentar Novamente" */
+    border: 2px solid #ccc; /* Cor e espessura da borda específica para o botão "Tentar Novamente" */
+}
+
+@media (max-width: 768px) {
+    .btnTry {
+        margin-left: 0;
+    }
+    .container {
+        flex-direction: column; /* Organiza os elementos em uma
+    }
+    .textQuestion {
+        font-size: 20px; /* Reduz o tamanho da fonte em telas menores */
+        padding: 10px; /* Ajusta o padding para dispositivos móveis */
+    }
+
+    .labelOption {
+        font-size: 16px; /* Reduz o tamanho da fonte para opções em telas menores */
+        padding: 10px; /* Ajusta o padding para dispositivos móveis */
+    }
+
+    button {
+        width: 120px; /* Ajusta a largura dos botões em telas menores */
+        height: 45px; /* Ajusta a altura dos botões em telas menores */
+    }
+}
